@@ -47,6 +47,10 @@ const stylesFunc = ()=>{
     }
 
     .book-details-div{
+        display: none;
+    }
+
+    .active{
         width: 90%;
         border: 1px solid;
         display: flex;
@@ -98,6 +102,15 @@ const stylesFunc = ()=>{
     }
 
     .bookList{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 50px;
+    }
+
+    .empty{
+        min-height: 200px; 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -166,6 +179,41 @@ const stylesFunc = ()=>{
         cursor: pointer;
     }
 
+    .deleteDiv{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: rgba(27, 26, 26, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .deleteMsgBox{
+        // min-width: 300px;
+        width: 600px;
+        height: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .deleteMsgBox>button{
+        background-color: #2196f3;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
     @media(max-width: 950px){
         .formData{
             flex-direction: column;
@@ -190,7 +238,11 @@ const stylesFunc = ()=>{
             padding-left: 10px;
         }
         .bookDesc p{
-        margin-left: 0;
+            margin-left: 0;
+        }
+        .deleteMsgBox{
+            margin: 0 10px;
+            width: 150%;
         }
     }
     
