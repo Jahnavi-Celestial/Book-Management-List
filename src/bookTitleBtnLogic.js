@@ -26,6 +26,10 @@ function bookTitleBtn() {
         return;
       }
 
+      if(document.querySelector(".book-desc-div")){
+        document.querySelector(".book-desc-div").remove();
+      }
+
       const bookDescDiv = document.createElement("div");
       bookDescDiv.className = "book-desc-div";
 

@@ -11,6 +11,12 @@ function createBookBtnLogic(){
         const bookPublishDate = document.querySelector("#publishDate");
         const bookPrice = document.querySelector("#price");
 
+        console.log(bookName);
+
+        if(bookName.value === "" || bookDetail.value === "" || bookDetail.value === "" || bookDetail.value === ""){
+            return;
+        }
+
         let obj = {
             id: Date.now(),
             bookName: bookName.value,
@@ -19,7 +25,10 @@ function createBookBtnLogic(){
             bookPublishDate: bookPublishDate.value,
             bookPrice: bookPrice.value,
         };
-        // console.log(obj);
+
+        
+        // console.log(obj.bookPublishDate);
+
 
         const exists = book.some(item => 
             item.bookName === obj.bookName && item.bookAuthor === obj.bookAuthor

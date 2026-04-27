@@ -4,6 +4,14 @@ function bookDetailsDivFunc() {
 
   const detailsForm = document.createElement("form");
   detailsForm.id = "details-form";
+  const today = new Date();
+
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+
+  const formattedDate = `${year}-${month}-${day}`;
+
   detailsForm.innerHTML = `
                             <div class="formData">
                                 <label for="bookName">Book Name</label>
@@ -19,7 +27,7 @@ function bookDetailsDivFunc() {
                             </div>
                             <div class="formData">
                                 <label for="publishDate">Publish Date</label>
-                                <input type="date" name="publishDate" required="true" id="publishDate">
+                                <input type="date" name="publishDate" required="true" id="publishDate" max=${formattedDate}>
                             </div>
                             <div class="formData">
                                 <label for="price">Price</label>

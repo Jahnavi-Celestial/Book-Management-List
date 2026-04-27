@@ -16,9 +16,19 @@ function deleteBtnLogic(titleDiv) {
     <p>You are deleting the following book:</p>
     <h3>${name}</h3>
     <button id="okBtn">OK</button>
+    <i class="fa-solid fa-xmark dontDelete"></i>
   `;
-    deleteDiv.appendChild(deleteMsgBox);
-    document.body.appendChild(deleteDiv);
+
+  deleteDiv.appendChild(deleteMsgBox);
+  document.body.appendChild(deleteDiv);
+
+  //if user dont want to delete
+  const dontDeleteBtn = document.querySelector(".dontDelete");
+  dontDeleteBtn.addEventListener('click', ()=>{
+    const deleteDiv = document.querySelector(".deleteDiv");
+    // console.log(deleteDiv);
+    deleteDiv.remove();
+  });
 
     let book = JSON.parse(localStorage.getItem("book")) || [];
     deleteMsgBox.querySelector("#okBtn").addEventListener("click", () => {
