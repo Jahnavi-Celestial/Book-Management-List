@@ -160,10 +160,11 @@ const stylesFunc = ()=>{
         border: none;
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         text-align: justify;
         cursor: default;
         margin: 10px 0;
+        padding: 10px;
     }
 
     .bookDesc span{
@@ -177,6 +178,20 @@ const stylesFunc = ()=>{
         margin-right: 20px;
         margin-left: 50px;
         cursor: pointer;
+    }
+
+    .book-desc-input {
+        width: 60%;
+        font-size: inherit;
+        font-family: inherit;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: 2px 6px;
+        outline: none;
+    }
+    
+    .book-desc-input:focus {
+        border-color: #999c9f;
     }
 
     .deleteDiv{
@@ -236,6 +251,9 @@ const stylesFunc = ()=>{
             align-items: flex-start;
             gap: 10px;
             padding-left: 10px;
+        }
+        .bookDesc span{
+            text-decoration: underline;
         }
         .bookDesc p{
             margin-left: 0;

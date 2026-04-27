@@ -55,8 +55,10 @@ function bookTitleBtn() {
 
       titleDiv.insertAdjacentElement("afterend", bookDescDiv);
 
-      // eslint-disable-next-line no-undef
+      /* eslint-disable no-undef*/
       deleteBtnLogic(titleDiv);
+
+      editBookDesc(titleDiv);
     });
   });
 }
